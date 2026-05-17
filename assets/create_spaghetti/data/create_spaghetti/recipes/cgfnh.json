@@ -1,0 +1,15 @@
+{
+  "type": "create_spaghetti:splitting",
+  "input": {
+    "item": "minecraft:iron_ingot"
+  },
+  "output1": {
+    "item": "minecraft:iron_nugget",
+    "count": 4
+  },
+  "output2": {
+    "item": "minecraft:iron_nugget",
+    "count": 4
+  },
+  "processingTime": 100
+}

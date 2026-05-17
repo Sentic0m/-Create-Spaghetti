@@ -1,0 +1,64 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_spaghetti:spaghetti_dough"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "chance": 120.0,
+      "item": "create_spaghetti:spaghetti"
+    },
+    {
+      "chance": 31.0,
+      "item": "create:wheat_flour"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "create_spaghetti:spaghetti_dough"
+        }
+      ],
+      "processingTime": 200,
+      "results": [
+        {
+          "item": "create_spaghetti:incomplete_spaghetti"
+        }
+      ]
+    },
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "create_spaghetti:incomplete_spaghetti"
+        }
+      ],
+      "processingTime": 200,
+      "results": [
+        {
+          "item": "create_spaghetti:incomplete_spaghetti"
+        }
+      ]
+    },
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "create_spaghetti:incomplete_spaghetti"
+        }
+      ],
+      "processingTime": 200,
+      "results": [
+        {
+          "item": "create_spaghetti:incomplete_spaghetti"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "create_spaghetti:incomplete_spaghetti"
+  }
+}

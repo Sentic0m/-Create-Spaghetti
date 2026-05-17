@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "create: spaghetti",
+  "ingredients": [
+    {
+      "item": "create_spaghetti:meatball_block"
+    }
+  ],
+  "result": {
+    "item": "create_spaghetti:meatball",
+    "count": 9
+  }
+}

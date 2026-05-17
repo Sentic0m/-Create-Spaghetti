@@ -1,0 +1,36 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create_spaghetti:tomato_seeds"
+    },
+    {
+      "item": "create_spaghetti:unfinished_plate"
+    },
+    {
+      "item": "create_spaghetti:smashed_tomato"
+    },
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "create:andesite_alloy"
+    },
+    {
+      "item": "create_spaghetti:unfinished_plate"
+    },
+    {
+      "item": "minecraft:andesite"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_spaghetti:item_splitter",
+      "count": 1
+    }
+  ],
+  "heatRequirement": "heated"
+}

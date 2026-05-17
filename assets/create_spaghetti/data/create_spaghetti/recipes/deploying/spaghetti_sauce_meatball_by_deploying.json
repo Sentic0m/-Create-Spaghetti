@@ -1,0 +1,16 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "create_spaghetti:spaghetti_sauce"
+    },
+    {
+      "item": "create_spaghetti:meatball"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_spaghetti:spaghetti_sauce_meatball"
+    }
+  ]
+}

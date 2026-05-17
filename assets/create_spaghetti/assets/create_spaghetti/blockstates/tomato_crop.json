@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "create_spaghetti:block/tomato_cropstage0"
+    },
+    "age=1": {
+      "model": "create_spaghetti:block/tomato_cropstage1"
+    },
+    "age=2": {
+      "model": "create_spaghetti:block/tomato_cropstage2"
+    },
+    "age=3": {
+      "model": "create_spaghetti:block/tomato_cropstage3"
+    },
+    "age=4": {
+      "model": "create_spaghetti:block/tomato_cropstage4"
+    },
+    "age=5": {
+      "model": "create_spaghetti:block/tomato_cropstage5"
+    },
+    "age=6": {
+      "model": "create_spaghetti:block/tomato_cropstage5"
+    },
+    "age=7": {
+      "model": "create_spaghetti:block/tomato_cropstage5"
+    }
+  }
+}

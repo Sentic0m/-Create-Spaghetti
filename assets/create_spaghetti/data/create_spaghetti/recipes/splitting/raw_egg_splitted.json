@@ -1,0 +1,13 @@
+{
+  "type": "create_spaghetti:splitting",
+  "input": {
+    "item": "create_spaghetti:raw_egg"
+  },
+  "output1": {
+    "item": "create_spaghetti:egg_white"
+  },
+  "output2": {
+    "item": "create_spaghetti:egg_yolk"
+  },
+  "processingTime": 100
+}

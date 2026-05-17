@@ -1,0 +1,20 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "create_spaghetti:tomato"
+    }
+  ],
+  "processingTime": 250,
+  "results": [
+    {
+      "item": "create_spaghetti:tomato_seeds",
+      "count": 1
+    },
+    {
+      "item": "create_spaghetti:tomato_seeds",
+      "count": 1,
+      "chance": 0.45
+    }
+  ]
+}

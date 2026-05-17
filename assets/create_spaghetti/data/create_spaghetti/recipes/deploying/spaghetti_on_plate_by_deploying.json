@@ -1,0 +1,16 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "create_spaghetti:plate"
+    },
+    {
+      "item": "create_spaghetti:spaghetti"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_spaghetti:spaghetti_plate"
+    }
+  ]
+}

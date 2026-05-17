@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "create_spaghetti:meatball"
+    },
+    {
+      "item": "create_spaghetti:meatball"
+    },
+    {
+      "item": "create_spaghetti:meatball"
+    },
+    {
+      "item": "create_spaghetti:meatball"
+    },
+    {
+      "item": "create_spaghetti:meatball"
+    },
+    {
+      "item": "create_spaghetti:meatball"
+    },
+    {
+      "item": "create_spaghetti:meatball"
+    },
+    {
+      "item": "create_spaghetti:meatball"
+    },
+    {
+      "item": "create_spaghetti:meatball"
+    }
+  ],
+  "result": {
+    "item": "create_spaghetti:meatball_block"
+  }
+}

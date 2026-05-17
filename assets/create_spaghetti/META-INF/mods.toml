@@ -1,0 +1,77 @@
+# This is the mods.toml for Create Spaghetti
+# It contains metadata for Forge to load your mod correctly.
+
+# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
+modLoader="javafml" #mandatory
+
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+loaderVersion="[47,)" #mandatory
+
+# The license for your mod. MIT is commonly used
+license="MIT" #mandatory
+
+# A URL to refer people to when problems occur with this mod
+#issueTrackerURL="https://example.com/issues" #optional
+
+# If your mod is purely client-side and has no multiplayer functionality, set this to true
+#clientSideOnly=false #optional
+
+# A list of mods contained in this JAR
+[[mods]] #mandatory
+
+# The modid of the mod. Only lowercase letters, numbers, and underscores!
+modId="create_spaghetti" #mandatory
+
+# The version number of your mod
+version="1.0.0" #mandatory
+
+# A display name for your mod
+displayName="Create: Spaghetti" #mandatory
+
+# A URL for the homepage of your mod
+#displayURL="https://example.com" #optional
+
+# A logo file in the root of the mod JAR
+#logoFile="logo.png" #optional
+
+# Optional credits text
+#credits="Created by DeinName" #optional
+
+# Author(s) of the mod
+authors="Sentic0m" #optional
+
+# Description of the mod (multi-line string supported)
+description='''Why should this mod have a description''' #mandatory
+
+# Display Test controls how version mismatches are handled
+#displayTest="MATCH_VERSION" #optional, default is MATCH_VERSION
+
+# Dependencies for this mod
+[[dependencies.create_spaghetti]]
+modId="create"
+mandatory=true
+versionRange="[0.5.1,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.create_spaghetti]] #optional
+modId="minecraft" #mandatory
+mandatory=true #mandatory
+versionRange="[1.20.1,1.21)" #mandatory
+ordering="NONE" #optional
+side="BOTH" #optional
+
+[[dependencies.create_spaghetti]]
+modId = "ponder"
+mandatory = true
+versionRange = "[*,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[modPlugins]]
+modId = "create_spaghetti"
+pluginClass = "net.senti.createspaghetti.ponder.ModPonders"
+
+# Features your mod requires, e.g., minimum OpenGL version
+#[features.create_spaghetti]
+#openGLVersion="[3.2,)" #optional

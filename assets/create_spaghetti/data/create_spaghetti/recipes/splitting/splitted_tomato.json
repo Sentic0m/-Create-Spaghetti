@@ -1,0 +1,14 @@
+{
+  "type": "create_spaghetti:splitting",
+  "input": {
+    "item": "create_spaghetti:smashed_tomato"
+  },
+  "output1": {
+    "item": "create_spaghetti:tomato_skin"
+  },
+  "output2": {
+    "fluid": "create_spaghetti:sauce",
+    "amount": "100"
+  },
+  "processingTime": 100
+}

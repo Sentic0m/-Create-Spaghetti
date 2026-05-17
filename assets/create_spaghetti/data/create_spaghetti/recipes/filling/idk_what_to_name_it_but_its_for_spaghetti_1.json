@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create_spaghetti:spaghetti_meatball"
+    },
+    {
+      "amount": 33.3,
+      "fluid": "create_spaghetti:sauce",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "create_spaghetti:spaghetti_sauce_meatball"
+    }
+  ]
+}

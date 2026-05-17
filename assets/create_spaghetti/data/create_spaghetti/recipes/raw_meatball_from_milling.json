@@ -1,0 +1,20 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:mutton"
+    }
+  ],
+  "processingTime": 100,
+  "results": [
+    {
+      "item": "create_spaghetti:raw_meatball",
+      "count": 1
+    },
+    {
+      "item": "create_spaghetti:raw_meatball",
+      "count": 1,
+      "chance": 0.2
+    }
+  ]
+}

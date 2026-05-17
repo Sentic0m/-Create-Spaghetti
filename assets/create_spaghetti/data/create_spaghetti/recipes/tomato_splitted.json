@@ -1,0 +1,18 @@
+{
+  "type": "create_spaghetti:item_splitting",
+  "ingredients": [
+    {
+      "item": "create_spaghetti:smashed_tomato"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "create_spaghetti:tomato_seeds",
+      "count": 3
+    },
+    {
+      "item": "create_spaghetti:tomato",
+      "count": 2
+    }
+  ]
+}

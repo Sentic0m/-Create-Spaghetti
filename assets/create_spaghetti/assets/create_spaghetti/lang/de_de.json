@@ -1,0 +1,41 @@
+{
+  "item.create_spaghetti.spaghetti_sauce_meatball": "Spaghetti mit Tomatensoße und Fleischbällchen",
+  "item.create_spaghetti.spaghetti_sauce": "Spaghetti mit Tomatensoße",
+  "item.create_spaghetti.spaghetti_meatball": "Spaghetti mit Fleischbällchen",
+  "item.create_spaghetti.spaghetti": "Spaghetti",
+  "item.create_spaghetti.spaghetti_plate":"Spaghetti auf dem Teller",
+  "item.create_spaghetti.plate": "Teller",
+  "item.create_spaghetti.unfinished_plate": "Unfertiger Teller",
+  "item.create_spaghetti.raw_meatball": "Rohe Fleischbällchen",
+  "item.create_spaghetti.meatball": "Fleischbällchen",
+  "item.create_spaghetti.sauce_bucket": "Eimer mit Tomaten Soße",
+  "item.create_spaghetti.tomato_seeds": "Tomaten Samen",
+  "item.create_spaghetti.tomato": "Tomate",
+  "item.create_spaghetti.smashed_tomato": "Zerquetschte Tomate",
+  "item.create_spaghetti.tomato_skin": "Tomaten Haut",
+  "item.create_spaghetti.spaghetti_dough": "Spaghetti Teig",
+  "item.create_spaghetti.egg_yolk": "Ei gelb",
+  "item.create_spaghetti.egg_white": "Ei Weiß",
+  "item.create_spaghetti.egg_shell": "Eier Schahle",
+  "item.create_spaghetti.raw_egg": "Rohes Ei",
+  "item.create_spaghetti.incomplete_spaghetti": "Unfertige Spaghetti",
+
+  "block.create_spaghetti.meatball_block": "Fleischbällchen Block",
+  "block.create_spaghetti.item_splitter": "Item Spallter",
+  "block.create_spaghetti.spaghetti_kinetic_block": "Item Spalter",
+  "block.create_spaghetti.sauce": "Tomaten soße",
+  "fluid_type.create_spaghetti.sauce": "Tomaten soße",
+
+  "create_spaghetti.ponder.spaghetti_kinetic_block.header": "Items verarbeiten mit dem Spaghetti-Kinetik-Block",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_1": "Der Item Splitter teilt Items in zwei Ausgaben auf",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_2": "Items werden seitlich auf Bänder oder Ablagen ausgeworfen",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_3": "Items werden auf Förderbändern oder Depots ausgeworfen, hier",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_4": "und/oder hier",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_5": "Flüssigkeiten werden auf den anderen Seiten entnommen",
+
+  "create_spaghetti.kinetic": "Kinetische belastungsauswertung:",
+
+  "jei.create_spaghetti.splitting": "Spalten",
+
+  "creativetab.create_spaghetti": "Create: Spaghetti"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "*+*",
+    " ~ "
+  ],
+  "key": {
+    "#": {
+      "item": "create:chute"
+    },
+    "*": {
+      "item": "create:andesite_funnel"
+    },
+    "+": {
+      "item": "create:andesite_casing"
+    },
+    "~": {
+      "item": "create:shaft"
+    }
+  },
+  "result": {
+    "item": "create_spaghetti:spaghetti_kinetic_block"
+  }
+}

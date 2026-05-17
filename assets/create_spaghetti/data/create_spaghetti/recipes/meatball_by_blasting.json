@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "create_spaghetti:raw_meatball"
+  },
+  "result": "create_spaghetti:meatball",
+  "experience": 0.8,
+  "cookingtime": 70
+}

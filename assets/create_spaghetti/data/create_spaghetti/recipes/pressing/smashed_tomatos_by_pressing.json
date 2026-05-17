@@ -1,0 +1,13 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item":"create_spaghetti:tomato"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_spaghetti:smashed_tomato"
+    }
+  ]
+}
