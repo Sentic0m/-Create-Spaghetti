@@ -1,0 +1,41 @@
+{
+  "item.create_spaghetti.spaghetti_sauce_meatball": "Spaghetti on plate with Tomatosauce and meatballs",
+  "item.create_spaghetti.spaghetti_sauce": "Spaghetti on plate with Tomatosauce",
+  "item.create_spaghetti.spaghetti_meatball": "Spaghetti on plate with meatballs",
+  "item.create_spaghetti.spaghetti":"Spaghetti",
+  "item.create_spaghetti.spaghetti_plate":"Spaghetti on plate",
+  "item.create_spaghetti.plate": "Plate",
+  "item.create_spaghetti.unfinished_plate": "Unfinished Plate",
+  "item.create_spaghetti.raw_meatball": "Raw Meatball",
+  "item.create_spaghetti.meatball": "Meatball",
+  "item.create_spaghetti.sauce_bucket": "Bucket of Tomatosauce",
+  "item.create_spaghetti.tomato_seeds": "Tomato Seeds",
+  "item.create_spaghetti.tomato": "Tomato",
+  "item.create_spaghetti.smashed_tomato": "Smashed Tomato",
+  "item.create_spaghetti.tomato_skin": "Tomato Skin",
+  "item.create_spaghetti.spaghetti_dough": "Spaghetti Dough",
+  "item.create_spaghetti.egg_yolk": "Egg Yolk",
+  "item.create_spaghetti.egg_white": "Egg White",
+  "item.create_spaghetti.egg_shell": "Egg shell",
+  "item.create_spaghetti.raw_egg": "Raw Egg",
+  "item.create_spaghetti.incomplete_spaghetti": "Incomplete Spaghetti",
+
+  "block.create_spaghetti.meatball_block": "Meatball Block",
+  "block.create_spaghetti.item_splitter": "Item Splitter",
+  "block.create_spaghetti.spaghetti_kinetic_block": "Item Splitter",
+  "block.create_spaghetti.sauce": "Tomatosauce",
+  "fluid_type.create_spaghetti.sauce": "Tomatosauce",
+
+  "create_spaghetti.ponder.spaghetti_kinetic_block.header": "Processing items with the Spaghetti Kinetic Block",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_1": "The Item Splitter splits item's into two items or fluids",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_2": "Drop items onto the top of the block so it can start processing it",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_3": "Items are ejected onto belts or on Depots, here",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_4": "and/or here",
+  "create_spaghetti.ponder.spaghetti_kinetic_block.text_5": "fluid's are on the other two sides extracted",
+
+  "create_spaghetti.kinetic": "Kinetic Stress Impact",
+
+  "jei.create_spaghetti.splitting": "Splitting",
+
+  "creativetab.create_spaghetti": "Create: Spaghetti"
+}

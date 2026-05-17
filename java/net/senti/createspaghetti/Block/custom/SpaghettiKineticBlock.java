@@ -1,0 +1,139 @@
+package net.senti.createspaghetti.Block.custom;
+
+import com.simibubi.create.content.fluids.pipes.FluidPipeBlock;
+import com.simibubi.create.content.kinetics.base.KineticBlock;
+import com.simibubi.create.foundation.block.IBE;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.senti.createspaghetti.Block.ModBlocks;
+import net.senti.createspaghetti.Block.entity.ModBlockEntities;
+import net.senti.createspaghetti.Block.entity.SpaghettiKineticBlockEntity;
+
+import java.util.List;
+
+public class SpaghettiKineticBlock extends KineticBlock implements IBE<SpaghettiKineticBlockEntity> {
+
+    // FIX: Properties für die Fluid-OUTPUT-Seiten (SOUTH und EAST),
+    // da dort die FluidTanks sitzen und Pipes sich verbinden sollen.
+    public static final BooleanProperty SOUTH = BooleanProperty.create("south");
+    public static final BooleanProperty EAST  = BooleanProperty.create("east");
+
+    private static final VoxelShape SHAPE = box(0, 0, 0, 16, 10, 16);
+
+    public SpaghettiKineticBlock(Properties properties) {
+        super(properties.noOcclusion());
+        registerDefaultState(defaultBlockState()
+                .setValue(SOUTH, false)
+                .setValue(EAST,  false));
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<net.minecraft.world.level.block.Block, BlockState> builder) {
+        super.createBlockStateDefinition(builder);
+        builder.add(SOUTH, EAST);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(net.minecraft.world.item.context.BlockPlaceContext context) {
+        Level level = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        return defaultBlockState()
+                .setValue(SOUTH, isPipe(level, pos, Direction.SOUTH))
+                .setValue(EAST,  isPipe(level, pos, Direction.EAST));
+    }
+
+    /**
+     * Prüft ob der Nachbar-Block eine Create-FluidPipe ist,
+     * die eine Öffnung in Richtung unseres Blocks hat.
+     */
+    private boolean isPipe(LevelReader level, BlockPos pos, Direction direction) {
+        BlockState neighbor = level.getBlockState(pos.relative(direction));
+
+        if (!(neighbor.getBlock() instanceof FluidPipeBlock))
+            return false;
+
+        // Die Seite der Pipe, die zu UNSEREM Block zeigt
+        Direction pipeOpeningFacing = direction.getOpposite();
+        String faceName = pipeOpeningFacing.getName();
+
+        for (net.minecraft.world.level.block.state.properties.Property<?> property : neighbor.getProperties()) {
+            if (property.getName().equalsIgnoreCase(faceName)) {
+                String value = neighbor.getValue(property).toString().toLowerCase();
+                return !value.equals("none");
+            }
+        }
+
+        // Fallback: FluidPipe vorhanden aber keine passende Property → verbinden
+        return true;
+    }
+
+    @Override
+    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState,
+                                  LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+        if (direction == Direction.SOUTH)
+            return state.setValue(SOUTH, isPipe(level, pos, Direction.SOUTH));
+        if (direction == Direction.EAST)
+            return state.setValue(EAST,  isPipe(level, pos, Direction.EAST));
+        return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
+    }
+
+    @Override
+    public boolean showCapacityWithAnnotation() { return true; }
+
+    @Override
+    public Class<SpaghettiKineticBlockEntity> getBlockEntityClass() {
+        return SpaghettiKineticBlockEntity.class;
+    }
+
+    @Override
+    public BlockEntityType<? extends SpaghettiKineticBlockEntity> getBlockEntityType() {
+        return ModBlockEntities.SPAGHETTI_KINETIC_BE.get();
+    }
+
+    @Override
+    public boolean hasShaftTowards(LevelReader world, BlockPos pos, BlockState state, Direction face) {
+        return face == Direction.DOWN;
+    }
+
+    @Override
+    public Direction.Axis getRotationAxis(BlockState state) {
+        return Direction.Axis.Y;
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPE;
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPE;
+    }
+
+    @Override
+    public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
+        return List.of(new ItemStack(ModBlocks.SPAGHETTI_KINETIC_BLOCK.get().asItem()));
+    }
+
+    @Override
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player,
+                                 InteractionHand hand, BlockHitResult hit) {
+        return InteractionResult.PASS;
+    }
+}
