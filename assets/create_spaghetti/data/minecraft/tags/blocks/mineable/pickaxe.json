@@ -1,5 +1,6 @@
 {
   "values": [
-    "create_spaghetti:spaghetti_kinetic_block"
+    "create_spaghetti:spaghetti_kinetic_block",
+    "create_spaghetti:spaghetti_press"
   ]
 }

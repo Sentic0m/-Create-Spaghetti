@@ -1,0 +1,8 @@
+{
+  "type!": "create:item_application",
+  "ingredients!": [
+    { "item!": "minecraft:stone" },
+    { "item!": "create:andesite_alloy" }
+  ],
+  "results!": [ { "item!": "minecraft:cobblestone" } ]
+}

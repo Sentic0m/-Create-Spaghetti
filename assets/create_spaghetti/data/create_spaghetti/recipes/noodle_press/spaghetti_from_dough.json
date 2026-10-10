@@ -1,0 +1,11 @@
+{
+  "type": "create_spaghetti:noodle_press",
+  "ingredient": {
+    "item": "create_spaghetti:spaghetti_dough"
+  },
+  "result": {
+    "item": "create_spaghetti:spaghetti",
+    "count": 1
+  },
+  "processingTime": 100
+}

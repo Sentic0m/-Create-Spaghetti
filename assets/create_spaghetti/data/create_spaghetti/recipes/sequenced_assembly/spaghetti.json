@@ -1,3 +1,4 @@
+/*
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
@@ -62,3 +63,4 @@
     "item": "create_spaghetti:incomplete_spaghetti"
   }
 }
+*/
