@@ -11,13 +11,16 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.senti.createspaghetti.Block.custom.AnimatedTestBlock;
 import net.senti.createspaghetti.Block.custom.ItemSplitterBlock;
 //import net.senti.createspaghetti.Block.entity.not_in_use.NoodlePressBlock;
 import net.senti.createspaghetti.Block.custom.SpaghettiKineticBlock;
+import net.senti.createspaghetti.Block.custom.SpaghettiPressBlock;
 import net.senti.createspaghetti.Block.custom.TomatoCropBlock;
 import net.senti.createspaghetti.CreateSpaghetti;
 import net.senti.createspaghetti.fluid.ModFluids;
@@ -33,16 +36,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> MEATBALL_BLOCK = registerBlock("meatball_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK)));
 
+    public static final RegistryObject<Block> SSPAGHETTI_PRESS = registerBlock("spaghetti_press",
+            () -> new SpaghettiPressBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE).mapColor(MapColor.PODZOL)
+                    .sound(SoundType.WOOD).noOcclusion()));
+
+    public static final RegistryObject<Block> ANIMATED_TEST_BLOCK = registerBlock("animated_test_block",
+            () -> new AnimatedTestBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
     public static final RegistryObject<Block> ITEM_SPLITTER = registerBlock("item_splitter",
             () -> new ItemSplitterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     public static final RegistryObject<Block> SPAGHETTI_KINETIC_BLOCK = registerBlock("spaghetti_kinetic_block",
             () -> new SpaghettiKineticBlock(BlockBehaviour.Properties.of().strength(1.5f, 6.0f).sound(SoundType.METAL).requiresCorrectToolForDrops().noOcclusion()));
-/*
-    public static final RegistryObject<NoodlePressBlock> NOODLE_PRESS = registerBlock("noodle_press",
-            () -> new NoodlePressBlock(BlockBehaviour.Properties.of().strength(3.5f).requiresCorrectToolForDrops().noOcclusion()));
-            
- */
 
     public static final RegistryObject<Block> TOMATO_CROP =
             BLOCKS.register("tomato_crop",
@@ -70,6 +75,9 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+        if (name.equals("spaghetti_press")) {
+            return ModItems.ITEMS.register(name, () -> new SpaghettiKineticBlockItem(block.get(), new Item.Properties()));
+        }
         if (name.equals("spaghetti_kinetic_block")) {
             return ModItems.ITEMS.register(name, () -> new SpaghettiKineticBlockItem(block.get(), new Item.Properties()));
         }

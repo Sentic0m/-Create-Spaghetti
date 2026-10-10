@@ -22,6 +22,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.create_spaghetti"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.SPAGHETTI_KINETIC_BLOCK.get());
+                        pOutput.accept(ModBlocks.SSPAGHETTI_PRESS.get());
+                        pOutput.accept(ModBlocks.ANIMATED_TEST_BLOCK.get());
                         pOutput.accept(ModBlocks.MEATBALL_BLOCK.get());
                         pOutput.accept(ModItems.SPAGHETTISAUCEMEATBALL.get());
                         pOutput.accept(ModItems.SPAGHETTISAUCE.get());

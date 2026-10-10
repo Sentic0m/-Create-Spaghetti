@@ -82,7 +82,8 @@ public class ModItems {
     public static final RegistryObject<Item> INCOMPLETE_SPAGHETTI = ITEMS.register("incomplete_spaghetti",
             () -> new Item(new Item.Properties()));
 
-
+    public static final RegistryObject<Item> SPAGHETTI_PRESS_OUTPUT = ITEMS.register("spaghetti_press_output",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

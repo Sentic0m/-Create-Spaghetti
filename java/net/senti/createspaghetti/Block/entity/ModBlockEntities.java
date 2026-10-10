@@ -23,6 +23,16 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of((pos, state) -> new SpaghettiKineticBlockEntity(ModBlockEntities.SPAGHETTI_KINETIC_BE.get(), pos, state),
                             ModBlocks.SPAGHETTI_KINETIC_BLOCK.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<SpaghettiPressBlockEntity>> SPAGHETTI_PRESS_BE =
+            BLOCK_ENTITIES.register("spaghetti_press_be", () ->
+                    BlockEntityType.Builder.of(SpaghettiPressBlockEntity::new,
+                            ModBlocks.SSPAGHETTI_PRESS.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<AnimatedTestBlockEntity>> ANIMATED_TEST_BE =
+            BLOCK_ENTITIES.register("animated_test_be", () ->
+                    BlockEntityType.Builder.of(AnimatedTestBlockEntity::new,
+                            ModBlocks.ANIMATED_TEST_BLOCK.get()).build(null));
+
     /*
     public static final RegistryObject<BlockEntityType<NoodlePressBlockEntity>> NOODLE_PRESS_BE =
             BLOCK_ENTITIES.register("noodle_press",
